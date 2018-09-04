@@ -1,1 +1,15 @@
 <h1>Server Component</h1>
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="username"
+  (input)="onUpdateUsername($event)">
+<div></div>
+<p>{{username}}</p>
+<div></div>
+<button
+  class="btn btn-primary"
+  [disabled]="!isActive"
+  (click)="onResetBtnClicked()">
+  Reset username
+</button>
